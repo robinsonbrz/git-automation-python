@@ -32,13 +32,13 @@ branch = repo.active_branch
 print("inicio do dia")
 print_repos()
 
-# Cria um novo branch
-new_branch = repo.create_head('novobranch2')               # create a new branch ...
+######## Cria um novo branch
+# new_branch = repo.create_head('novobranch2')               # create a new branch ...
 
 
-print_repos()
+# print_repos()
 
-print("Criando um novo branch")
+# print("Criando um novo branch")
 # faz checout em um branch criado
 repo.git.checkout("main")
 
@@ -47,3 +47,12 @@ repo = git.Repo("../")
 branch = repo.active_branch
 
 print_repos()
+
+
+index = repo.index
+index.add("*")
+
+
+
+# Commit the changes to deviate masters history
+repo.index.commit("Commit efetuado pelo script Python")
