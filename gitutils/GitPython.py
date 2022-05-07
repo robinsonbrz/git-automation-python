@@ -49,8 +49,9 @@ branch = repo.active_branch
 print_repos()
 
 
-index = repo.index
-index.add("*")
+repo.git.add(update=True)
+# index = repo.index
+# index.add("*")
 
 
 
