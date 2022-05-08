@@ -9,6 +9,8 @@ import os
 
 import git
 
+import le_txt
+
 # rorepo is a Repo instance pointing to the git-python repository.
 # For all you know, the first argument to Repo is a path to the repository
 # you want to work with
@@ -24,7 +26,6 @@ def print_repos():
 def get_branch():
     repo = git.Repo(".")
     branch = repo.active_branch
-    print("branch: ", branch)
     return branch
 
 
@@ -62,9 +63,16 @@ def create_new_branch(nome_novo_branch):
 
 def push_batch(comentario_commmit):
     nome_branch_atual = get_branch()
+    print("\n\n\n\n\n")
+    comando = "dir"
+    os.system(comando)
+    print("\n\n\n\n\n")
+
+    numero_branch_atual = le_txt.get_branch_atual()
+    emoji_atual = le_txt.get_emoji(numero_branch_atual) + " "
 
     os.system("git add .")
-    comando = "git commit -m" + comentario_commmit
+    comando = 'git commit -m "' + emoji_atual + comentario_commmit + '"'
     
     os.system(comando)
     comando = "git checkout main"
@@ -76,7 +84,8 @@ def push_batch(comentario_commmit):
     comando = "git push"
     os.system(comando)
 
-    nome_novo_branch = "novo02"
+    numero_novo_branch = int(numero_branch_atual) + 1
+    nome_novo_branch = "feat" + str(numero_novo_branch)
     create_new_branch(nome_novo_branch)
     return
     

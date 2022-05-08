@@ -8,8 +8,6 @@ print('P -Lote de comandos, "add .", "Commit","Checkout main","rebase","Push ori
 
 selecao = input("Digite sua opção: ").upper()
 
-print(selecao)
-
 if selecao == "B":
     print(git_functions.get_branch())
 elif selecao == "C":
