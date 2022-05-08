@@ -52,10 +52,8 @@ def push_batch(comentario_commmit):
     nome_branch_atual = get_branch()
     print("\n\n\n\n\n")
 
-
     numero_branch_atual = le_txt.get_branch_atual()
     emoji_atual = le_txt.get_emoji(numero_branch_atual) + " "
-
 
     os.system("git add .")
     
@@ -78,44 +76,3 @@ def push_batch(comentario_commmit):
 
     le_txt.set_branch_atual(numero_novo_branch)
     return
-    
-
-
-
-
-
-# bare_repo = Repo.init(os.path.join(rw_dir, 'bare-repo'), bare=True)
-# assert bare_repo.bare
-
-#######
-# repo.untracked_files             # retrieve a list of untracked files
-#######
-
-
-######## Cria um novo branch
-# new_branch = repo.create_head('novobranch2')               # create a new branch ...
-
-
-# print_repos()
-
-# print("Criando um novo branch")
-
-
-# recupera a informação do repositorio local atualizado
-
-'''
-repo = git.Repo("../")
-branch = repo.active_branch
-
-print_repos()
-
-
-repo.git.add(update=True)
-
-'''
-# index = repo.index
-# index.add("*")
-
-
-
-
