@@ -28,9 +28,7 @@
                 </tr>
             </table>
     <div align="center">
-    <br>
-        <a href="https://www.linkedin.com/in/robinsonbrz/">
-            <img src="Movie List.jpg" width="600" height="auto">
+    <br><br>
             <h3 align="left">
                 🚧 Projeto 🚀 concluído 🚧
             </h3>
@@ -58,10 +56,21 @@ pip install -r requirements.txt
 
 
 ```
-<p>Copie a pasta "gitutils" na raiz de seu projeto.<br>
-Iniciar o arquivo "branch_atual.txt" dentro da pasta "gitutils" com o número atual commits do seu projeto.<br>
+<p>Copie a pasta "gitutils" e arquivo "rebase_branch.bat" para a raiz de seu projeto.<br>
+Iniciar o arquivo "branch_atual.txt" dentro da pasta "gitutils" com o número inicial de commits do seu projeto.<br>
 ex: escreva "1", se for o primeiro commit.<br> 
 </p>
+<p>
+Execute o arquivo "rebase_branch.bat"<br>
+Digite p<br>
+Escreva o comentário commit e pressione ENTER
+</p>
+
+```bash
+rebase_branch.bat
+
+
+```
 <br>
    <h3 align="left">Linguagens e ferramentas utilizadas:</h3>
     <br>
@@ -145,5 +154,5 @@ ex: escreva "1", se for o primeiro commit.<br>
         </table>
     </div>
     <br>
-    Django-web-scrap
+    GIT PYTHON AUTOMATIZADO WINDOWS
 </div>
