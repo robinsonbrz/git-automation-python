@@ -70,7 +70,7 @@ def push_batch(comentario_commmit):
     comando = "git checkout main"
     os.system(comando)
 
-    comando = "git rebase" + nome_branch_atual
+    comando = "git rebase" + str(nome_branch_atual)
     os.system(comando)
 
     comando = "git push"
