@@ -39,19 +39,6 @@ def checkout_branch(nome_branch):# faz checout em um branch criado
     repo.git.checkout(nome_branch)
 
 
-
-
-def commit_branch():
-    get_branch()
-    # index = repo.index
-    # index.add("*")
-    # Commit the changes to deviate masters history
-    repo.index.commit("Commit efetuado pelo script Python")   
-    # Commit the changes to deviate masters history
-    repo.index.commit("Commit efetuado pelo script Python")
-    repo.git.checkout(nome_branch)
-
-
 #(nome_novo_branch):
 ######## Cria um novo branch
 def create_new_branch(nome_novo_branch):     
@@ -71,14 +58,16 @@ def push_batch(comentario_commmit):
     numero_branch_atual = le_txt.get_branch_atual()
     emoji_atual = le_txt.get_emoji(numero_branch_atual) + " "
 
+
     os.system("git add .")
-    comando = 'git commit -m "' + emoji_atual + comentario_commmit + '"'
     
+    comando = 'git commit -m "' + emoji_atual + comentario_commmit + '"'
     os.system(comando)
+    
     comando = "git checkout main"
     os.system(comando)
 
-    comando = "git rebase" + str(nome_branch_atual)
+    comando = "git rebase " + str(nome_branch_atual)
     os.system(comando)
 
     comando = "git push"
