@@ -51,9 +51,7 @@ def create_new_branch(nome_novo_branch):
 def push_batch(comentario_commmit):
     nome_branch_atual = get_branch()
     print("\n\n\n\n\n")
-    comando = "dir"
-    os.system(comando)
-    print("\n\n\n\n\n")
+
 
     numero_branch_atual = le_txt.get_branch_atual()
     emoji_atual = le_txt.get_emoji(numero_branch_atual) + " "
@@ -61,7 +59,8 @@ def push_batch(comentario_commmit):
 
     os.system("git add .")
     
-    comando = 'git commit -m "' + emoji_atual + comentario_commmit + '"'
+    comando = 'git commit -m "' + emoji_atual[0:-2] + ' ' + comentario_commmit + '"'
+    print(comando)
     os.system(comando)
     
     comando = "git checkout main"
@@ -76,6 +75,8 @@ def push_batch(comentario_commmit):
     numero_novo_branch = int(numero_branch_atual) + 1
     nome_novo_branch = "feat" + str(numero_novo_branch)
     create_new_branch(nome_novo_branch)
+
+    le_txt.set_branch_atual(numero_novo_branch)
     return
     
 
