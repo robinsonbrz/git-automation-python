@@ -20,7 +20,7 @@ def get_branch_atual():
 
 def set_branch_atual(numero_linha):
     with open('gitutils/branch_atual.txt', 'w') as arquivo:
-        arquivo.write(numero_linha)
+        arquivo.write(str(numero_linha))
         arquivo.close()
         return
 '''
