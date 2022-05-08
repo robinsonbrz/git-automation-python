@@ -1,7 +1,6 @@
 def get_emoji(numero_linha):
     ref_arquivo = open("gitutils/emojis.txt", "r", encoding="utf8")
-    #linha = ref_arquivo.readline()
-
+    
     lista_de_emojis = ref_arquivo.readlines()
     ref_arquivo.close()
     emoji_atual = lista_de_emojis[int(numero_linha)]

@@ -11,17 +11,6 @@ import git
 
 import le_txt
 
-# rorepo is a Repo instance pointing to the git-python repository.
-# For all you know, the first argument to Repo is a path to the repository
-# you want to work with
-
-
-def print_repos():
-    print("#########################")
-    print("repo:   ", repo)
-    print("branch: ", branch)
-    print("#########################\n")
-
 
 def get_branch():
     repo = git.Repo(".")
@@ -55,6 +44,10 @@ def push_batch(comentario_commmit):
     numero_branch_atual = le_txt.get_branch_atual()
     emoji_atual = le_txt.get_emoji(numero_branch_atual) + " "
 
+    numero_novo_branch = int(numero_branch_atual) + 1
+    nome_novo_branch = "feat" + str(numero_novo_branch)
+    le_txt.set_branch_atual(numero_novo_branch)
+
     os.system("git add .")
     
     comando = 'git commit -m "' + emoji_atual[0:-2] + ' ' + comentario_commmit + '"'
@@ -70,9 +63,6 @@ def push_batch(comentario_commmit):
     comando = "git push"
     os.system(comando)
 
-    numero_novo_branch = int(numero_branch_atual) + 1
-    nome_novo_branch = "feat" + str(numero_novo_branch)
     create_new_branch(nome_novo_branch)
 
-    le_txt.set_branch_atual(numero_novo_branch)
     return
