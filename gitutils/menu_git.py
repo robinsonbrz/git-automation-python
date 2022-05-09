@@ -10,4 +10,4 @@ if selecao == "P":
     comentario_commmit = input("Digite mensagem de commit: ")
     git_functions.push_batch(comentario_commmit)
 elif selecao == "G":
-    git_functions.get_branch()
+    print(git_functions.get_branch())

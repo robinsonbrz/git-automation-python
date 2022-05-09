@@ -7,8 +7,6 @@ Created on Sat May  7 11:20:38 2022
 
 import os
 
-import git
-
 import le_txt
 
 
@@ -18,16 +16,6 @@ def get_branch():
     retorno = open('tmp', 'r').read()
     os.remove('tmp')
     return retorno
-
-
-def get_repo():
-    repo = git.Repo(".")
-    return repo
-
-
-def checkout_branch(nome_branch):# faz checout em um branch criado
-    get_branch()
-    repo.git.checkout(nome_branch)
 
 
 #(nome_novo_branch):

@@ -1,6 +1,6 @@
 ﻿<div width="720">
     <h1 align="left">Script Python Rebase emoji - apenas SO Windows</h1>
-    <h2 align="left">Python script acumula número do último branch, e cria branchs em sucessão numérica a cada commit.</h2>
+    <h2 align="left">Python script acumula número do último branch em txt, e cria branchs em sucessão numérica a cada commit.</h2>
     <br>
 <br>
 <br>
@@ -60,17 +60,15 @@ pip install -r requirements.txt
 Iniciar o arquivo "branch_atual.txt" dentro da pasta "gitutils" com o número inicial de commits do seu projeto.<br>
 ex: escreva "1", se for o primeiro commit.<br> 
 </p>
+
+```bash
+rebase_branch.bat
+```
 <p>
 Execute o arquivo "rebase_branch.bat"<br>
 Digite p<br>
 Escreva o comentário commit e pressione ENTER
 </p>
-
-```bash
-rebase_branch.bat
-
-
-```
 <br>
    <h3 align="left">Linguagens e ferramentas utilizadas:</h3>
     <br>
@@ -79,41 +77,15 @@ rebase_branch.bat
             <tr>
                 <td align=center width="180">
                     <a href="https://www.linkedin.com/in/robinsonbrz/">
-                        <img src="https://raw.githubusercontent.com/robinsonbrz/robinsonbrz/main/static/img/empty.png"
-                            width="100" height="100" />
-                        <br />
-                </td>
-                <td align=center width="180">
-                    <a href="https://www.linkedin.com/in/robinsonbrz/">
                         <img src="https://raw.githubusercontent.com/robinsonbrz/robinsonbrz/main/static/img/python.png"
                             width="100" height="100" />
                         <br /> Python
                 </td>
-                <td align=center width="180">
-                    <a href="https://www.linkedin.com/in/robinsonbrz/">
-                        <img src="https://raw.githubusercontent.com/robinsonbrz/robinsonbrz/main/static/img/empty.png"
-                            width="100" height="100" />
-                        <br /> 
-                </td>
-                <td align=center width="180">
-                    <a href="https://www.linkedin.com/in/robinsonbrz/">
-                        <img src="https://raw.githubusercontent.com/robinsonbrz/robinsonbrz/main/static/img/empty.png"
-                            width="100" height="100" />
-                        <br />
-                </td>
-            </tr>
-            <tr>
                 <td align=center>
                     <a href="https://www.linkedin.com/in/robinsonbrz/">
                         <img src="https://raw.githubusercontent.com/robinsonbrz/robinsonbrz/main/static/img/visual_studio_code.png"
                             width="100" height="100" />
                         <br /> Visual Studio Code
-                </td>
-                <td align=center>
-                    <a href="https://www.linkedin.com/in/robinsonbrz/">
-                        <img src="https://raw.githubusercontent.com/robinsonbrz/robinsonbrz/main/static/img/ubuntu.png"
-                            width="100" height="100" />
-                        <br /> Ubuntu Linux
                 </td>
                 <td align=center>
                     <a href="https://www.linkedin.com/in/robinsonbrz/">
