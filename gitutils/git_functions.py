@@ -13,9 +13,11 @@ import le_txt
 
 
 def get_branch():
-    repo = git.Repo(".")
-    branch = repo.active_branch
-    return branch
+    comando = "git rev-parse --abbrev-ref HEAD"
+    os.system(comando + " > tmp")
+    retorno = open('tmp', 'r').read()
+    os.remove('tmp')
+    return retorno
 
 
 def get_repo():
